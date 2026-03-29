@@ -127,6 +127,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
     padding: theme.spacing.sm,
+    paddingBottom: Platform.OS === 'android' ? 30 : theme.spacing.sm,
     backgroundColor: theme.colors.surface,
     alignItems: 'flex-end',
   },
