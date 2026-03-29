@@ -1,0 +1,21 @@
+name: Deploy Stealth Relay to Render
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'relay/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Render Deployment
+        # You will need to add RENDER_DEPLOY_HOOK to your GitHub Repository Secrets
+        run: |
+          if [ -z "${{ secrets.RENDER_DEPLOY_HOOK }}" ]; then
+            echo "ERROR: RENDER_DEPLOY_HOOK secret is missing!"
+            exit 1
+          fi
+          echo "Triggering Render via Hook..."
+          curl -X POST -d "" ${{ secrets.RENDER_DEPLOY_HOOK }}
