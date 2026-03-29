@@ -33,7 +33,7 @@ export const useAppStore = create<AppState>((set) => ({
   privateKey: null,
   publicKey: null,
   relays: [
-    { url: 'wss://nadirlon.onrender.com', connected: false },
+    { url: process.env.EXPO_PUBLIC_DEFAULT_RELAY || 'wss://nadirlon.onrender.com', connected: false },
   ],
   conversations: {},
   profiles: {},

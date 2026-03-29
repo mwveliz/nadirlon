@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadirlon | Stealth Messenger</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --surface-color: #161b22;
+            --primary-color: #58a6ff;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid #30363d;
+            background: linear-gradient(180deg, rgba(22,27,34,1) 0%, rgba(13,17,23,1) 100%);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 10px;
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid #30363d;
+            color: var(--text-main);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-muted);
+            background-color: #21262d;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background-color: var(--surface-color);
+            border: 1px solid #30363d;
+            padding: 30px;
+            border-radius: 12px;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .feature-card h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        code {
+            background-color: rgba(110,118,129,0.4);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nadirlon</h1>
+        <p class="subtitle">A mathematical fortress for your conversations. No central servers, no passwords, no metadata mining.</p>
+        
+        <div class="cta-buttons">
+            <a href="https://github.com/mwveliz/nadirlon#readme" class="btn">Read the Specs</a>
+            <a href="https://github.com/mwveliz/nadirlon/blob/main/WHITEPAPER.md" class="btn btn-outline">Technical Whitepaper</a>
+        </div>
+    </header>
+
+    <div class="features">
+        <div class="feature-card">
+            <h3>🛡️ True Serverless</h3>
+            <p>We don't own your data. Nadirlon connects through "dumb" WebSocket Relays. It broadcasts encrypted noise. Your phone holds the only keys capable of reversing that noise.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🔒 NIP-44 Deep Crypto</h3>
+            <p>Every Direct Message uses <code>ChaCha20-Poly1305</code> authenticated encryption over an <code>X25519</code> Diffie-Hellman key exchange. Interceptors only see random blobs.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>👻 Nameless Avatars</h3>
+            <p>Forget phone numbers. When you launch Nadirlon, a localized cryptographic identity (<code>npub</code>) is minted exclusively on your hardware. Claim any nickname you want.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🌍 Community Sovereignty</h3>
+            <p>Don't trust public relays? Good. Fork the app, set <code>EXPO_PUBLIC_DEFAULT_RELAY</code>, and point it to your own private Node.js Mini-Relay. It takes 10 minutes to grant your community total self-governance.</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding: 40px; color: var(--text-muted); border-top: 1px solid #30363d;">
+        <p>Nadirlon</p>
+    </div>
+
+</body>
+</html>
