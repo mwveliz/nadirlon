@@ -33,9 +33,7 @@ export const useAppStore = create<AppState>((set) => ({
   privateKey: null,
   publicKey: null,
   relays: [
-    { url: 'wss://relay.damus.io', connected: false },
-    { url: 'wss://relay.current.fyi', connected: false },
-    { url: 'wss://nostr-pub.wellorder.net', connected: false },
+    { url: 'wss://nadirlon.onrender.com', connected: false },
   ],
   conversations: {},
   profiles: {},
@@ -54,7 +52,7 @@ export const useAppStore = create<AppState>((set) => ({
         messages: [],
         lastMessageAt: 0,
       };
-      
+
       // Prevent duplicates
       if (conv.messages.some((m) => m.id === message.id)) return state;
 
