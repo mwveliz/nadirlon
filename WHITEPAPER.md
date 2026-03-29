@@ -1,4 +1,4 @@
-n# Nadirlon Stealth Messenger: Technical Whitepaper
+# Nadirlon Stealth Messenger: Technical Whitepaper
 
 ## Abstract
 Nadirlon was conceived with a single, uncompromising goal: to provide an anonymous, censor-resistant communication protocol that removes the traditional "Central Server" from the equation. By leveraging the Nostr protocol and NIP-44 cryptography, Nadirlon provides true End-to-End Encryption (E2EE) over ephemeral, pluggable network topologies.
