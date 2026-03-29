@@ -19,6 +19,13 @@ EXPO_PUBLIC_DEFAULT_RELAY=wss://your-private-relay.com npx expo start
 ```
 Even if a user downloads the default APK, they can freely change the Relay URL inside the app's settings at any time without losing their keys or contacts.
 
+## 🧅 Tor Compatibility (Ultimate Privacy)
+Nadirlon is explicitly designed to delegate network proxying to the Operating System. 
+To achieve complete IP anonymity (so the Relay doesn't even know your device's IP address):
+1. Download **Orbot** (the official Tor proxy for Android).
+2. Enable **VPN Mode** and select the Nadirlon app.
+3. The app's WebSockets will seamlessly route through the Tor onion network with zero extra code or configuration needed.
+
 ## How to Run Locally
 1. `npm install`
 2. `npx expo start`
