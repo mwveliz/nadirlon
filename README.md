@@ -12,6 +12,25 @@ Nadirlon uses **Nostr Relays**, which are mathematical "dumb broadcasters".
 2. The relay (`wss://nadirlon.onrender.com`) is just a temporary WebSocket reflector. It does not look at your contacts, it does not hold an account for you, and it has no database to store permanent chat history logs.
 3. Every single Direct Message is encrypted **before** it leaves your phone using military-grade cryptography (NIP-44).
 
+## Architecture
+```text
+  📱 Client A (Alice)                      📱 Client B (Bob)
+  [ Local nsec/npub ]                      [ Local nsec/npub ]
+          │                                        │
+          │ NIP-44 E2E Encrypted                   │ NIP-44 E2E Encrypted
+          │ (Blob: "?iv=...")                      │ (Blob: "?iv=...")
+          ▼                                        ▼
+    [ Tor Proxy SOCKS5 ] (Optional)          [ Tor Proxy SOCKS5 ] (Optional)
+          │                                        │
+          └─────────────┐            ┌─────────────┘
+                        ▼            ▼
+                     ☁️ "Dumb" Nostr Relay
+                    (wss://nadirlon.onrender.com)
+                    - No Database
+                    - No Accounts
+                    - Just Ephemeral WebSockets 
+```
+
 ## Community Sovereignty (Host Your Own Network)
 Nadirlon is not locked into any central relay. Each community, activist group, or open-source collective can host their own private Mini-Relay and deploy their own APKs.
 
