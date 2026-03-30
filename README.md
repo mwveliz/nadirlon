@@ -2,7 +2,7 @@
 
 A decentralized, serverless-grade messaging application built on React Native (Expo) and the Nostr protocol. 
 
-[👉 **Download the Android APK**](https://raw.githubusercontent.com/mwveliz/nadirlon/gh-pages/releases/nadirlon.apk)
+[👉 **Download the Android APK**](https://github.com/mwveliz/nadirlon/blob/main/releases/nadirlon.apk)
 
 ## Wait, is this a server?
 **NO.** Traditional chat apps (WhatsApp, Telegram, Discord) have central servers with proprietary databases storing who you are, who you talk to, and your metadata.
